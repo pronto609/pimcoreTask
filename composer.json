@@ -22,6 +22,7 @@
   "require-dev": {
     "codeception/codeception": "^5.0.3",
     "codeception/module-symfony": "^3.1.0",
+    "shake/database": "^3.0",
     "symfony/maker-bundle": "^1.58"
   },
   "suggest": {
