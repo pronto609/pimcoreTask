@@ -12,6 +12,9 @@
   },
   "prefer-stable": true,
   "require": {
+    "doctrine/doctrine-fixtures-bundle": "^3.5",
+    "doctrine/persistence": "^3.3",
+    "fzaninotto/faker": "^1.5",
     "pimcore/admin-ui-classic-bundle": "^1.0",
     "pimcore/pimcore": "^11.0.4",
     "symfony/dotenv": "^6.2",
@@ -22,6 +25,7 @@
   "require-dev": {
     "codeception/codeception": "^5.0.3",
     "codeception/module-symfony": "^3.1.0",
+    "its-mieger/lara-db-ext": "^1.14",
     "shake/database": "^3.0",
     "symfony/maker-bundle": "^1.58"
   },

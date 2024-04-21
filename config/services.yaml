@@ -84,3 +84,11 @@ services:
     # App\EventListener\TestListener:
     #     tags:
     #         - { name: kernel.event_listener, event: pimcore.dataobject.preUpdate, method: onObjectPreUpdate }
+    faker.generator:
+        class: Faker\Generator
+
+    App\DataFixtures\FilterFixtures:
+        arguments:
+            $faker: '@faker.generator'
+        tags:
+            - { name: doctrine.fixture.orm }
