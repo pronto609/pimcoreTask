@@ -3,6 +3,16 @@ imports:
 
 
 pimcore:
+#    models:
+#        class_overrides:
+#            'Pimcore\Model\User\AbstractUser': 'App\Model\DataObject\News\Listing'
+
+services:
+    App\EventSubscriber\OverrideUserSaveListener:
+        tags:
+            - {name: kernel.event_listener, event: pimcore.user.preUpdate, method: onPreUpdate }
+            - {name: kernel.event_listener, event: pimcore.user.preAdd, method: onPreCreate }
+
 
 # IMPORTANT Notice!
 # Following there are only some examples listed, for a full list of possible options, please run the following command:
