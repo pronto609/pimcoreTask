@@ -7,11 +7,6 @@ pimcore:
 #        class_overrides:
 #            'Pimcore\Model\User\AbstractUser': 'App\Model\DataObject\News\Listing'
 
-services:
-    App\EventSubscriber\OverrideUserSaveListener:
-        tags:
-            - {name: kernel.event_listener, event: pimcore.user.preUpdate, method: onPreUpdate }
-            - {name: kernel.event_listener, event: pimcore.user.preAdd, method: onPreCreate }
 
 
 # IMPORTANT Notice!

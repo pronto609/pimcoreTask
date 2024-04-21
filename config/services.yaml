@@ -42,6 +42,11 @@ services:
 
     Pimcore\Security\User\UserProvider:
         class: App\Security\CustomUserProvider
+
+    App\EventSubscriber\OverrideUserSaveListener:
+        tags:
+            - { name: kernel.event_listener, event: pimcore.user.preUpdate, method: onPreUpdate }
+            - { name: kernel.event_listener, event: pimcore.user.preAdd, method: onPreCreate }
     #
     # CONTROLLERS
     #
